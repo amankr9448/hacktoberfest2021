@@ -1,6 +1,4 @@
-# Tic-Tac-Toe Program using
-# random number in Python
-
+# Tic-Tac-Toe Program using random number in Python
 # importing all necessary libraries
 import numpy as np
 import random
@@ -30,8 +28,7 @@ def random_place(board, player):
 	board[current_loc] = player
 	return(board)
 
-# Checks whether the player has three
-# of their marks in a horizontal row
+# Checks whether the player has three of their marks in a horizontal row
 def row_win(board, player):
 	for x in range(len(board)):
 		win = True
@@ -45,8 +42,7 @@ def row_win(board, player):
 			return(win)
 	return(win)
 
-# Checks whether the player has three
-# of their marks in a vertical row
+# Checks whether the player has three of their marks in a vertical row
 def col_win(board, player):
 	for x in range(len(board)):
 		win = True
@@ -78,8 +74,7 @@ def diag_win(board, player):
 				win = False
 	return win
 
-# Evaluates whether there is
-# a winner or a tie
+# Evaluates whether there is a winner or a tie
 def evaluate(board):
 	winner = 0
 	
