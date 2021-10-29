@@ -4,9 +4,9 @@ int main(void)
 	int a[100],n,i,j,b,choice;
 printf("enter the number of values to be inserted\n");
 scanf("%d",&n);
+printf("enter the values\n");
 for(i=0;i<n;i++)
 {
-	printf("enter the value");
 	scanf("%d",&a[i]);
 }
 
@@ -20,7 +20,7 @@ if(choice==1)
         {
 	for(j=i+1;j<n;j++)
 	{
-	if(a[i]<a[j])
+	if(a[i]>a[j])
 	{
 		b=a[i];
 		a[i]=a[j];
@@ -30,13 +30,13 @@ if(choice==1)
       }
 }
 	
-else
+else if(choice==2)
 {
 	for(i=0;i<n;i++)
 {
 	for(j=i+1;j<n;j++)
 	{
-	if(a[i]>a[j])
+	if(a[i]<a[j])
 	{
 		b=a[i];
 		a[i]=a[j];
@@ -45,6 +45,11 @@ else
 }
 }
 }
+else
+{
+	printf("Invalid Choice\n");
+}
+
 	
 
 for(i=0;i<n;i++)
@@ -60,3 +65,5 @@ printf("%d ",a[i]);
 //enter the value09
 //enter the value35
 //252 78 57 35 9
+
+//update-user can choose which operation to perform
